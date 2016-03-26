@@ -1,0 +1,30 @@
+<div layout="column">
+  <p>
+    Search: <input type="text" ng-model="test">
+  </p>
+  <div layout="column" layout-align="center center">
+    <h1>List of Names</h1>
+    <div layout="row" layout-xs="column">
+      <div flex>
+
+        <md-button ng-click="dialog()"ng-repeat="people in contacts | filter:test | orderBy:'name'">
+        <md-card>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{people.name}}</span>
+              <span class="md-subhead">Phone: {{people.phone}}</span>
+              <span class="md-subhead">Country: {{people.country}}</span>
+            </md-card-title-text>
+            <md-card-title-media>
+              <div class="md-media-sm card-media"></div>
+            </md-card-title-media>
+          </md-card-title>
+        </md-card>
+        </md-button>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
