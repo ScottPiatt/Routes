@@ -38,7 +38,7 @@
 
     <tbody>
       <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
-        <td><a href="https://{{user.name}}/github.io/{{repo.name}}">{{repo.name}}</a></td>
+        <td>{{repo.name}}</td>
         <td>{{repo.stargazers_count | number}}</td>
         <td>{{repo.language}}</td>
       </tr>
